@@ -1,0 +1,91 @@
+// const express = require('express');
+// const bcrypt = require('bcryptjs');
+// const axios = require('axios');
+// const request = require('request');
+// //const apilayer = require('@apilayer/numverify');
+// //it will get all the ability of express
+// const router = express.Router();
+
+
+// require ('../db/conn');
+// const phOTP = require('../model/phoneOTPSchema');
+
+
+
+
+
+
+
+
+// const API_KEY = 'ZBAdByJ5Lw1H0w9dZZwCSNZzuuPHFzAG';
+// const PHONE_NUMBER = '+923231492000';
+
+// // Make a request to the NumVerify API
+// request(`http://apilayer.net/api/validate?access_key=${API_KEY}&number=${PHONE_NUMBER}`, { json: true }, (err, res, body) => {
+//   if (err) {
+//     console.error(err);
+//     return;
+//   }
+
+//   // Print the response from the NumVerify API
+//   console.log(body);
+// });
+
+// router.post('/send-phOTP', (req, res) => {
+//     const phoneNumber = req.body.phoneNumber;
+  
+//     const NumVerify = require('numverify');
+//     const numverify = new NumVerify('Qa6ZpAIhVK9GcROJWL91Wf5nVP3bFsgC');
+  
+//     numverify.getPhoneNumber(phoneNumber, (error, data) => {
+//       if (error) {
+//         console.error(error);
+//         res.status(500).send({ error: 'Failed to send OTP' });
+//       } else {
+//         console.log(data);
+//         res.send({ message: 'OTP sent successfully' });
+//       }
+//     });
+//   });
+
+//   router.post('/verify-phOTP', (req, res) => {
+//     const phoneNumber = req.body.phoneNumber;
+//     const otp = req.body.otp;
+  
+//     const NumVerify = require('numverify');
+//     const numverify = new NumVerify('ZBAdByJ5Lw1H0w9dZZwCSNZzuuPHFzAG');
+  
+//     numverify.verifyPhoneNumber(phoneNumber, otp, (error, data) => {
+//       if (error) {
+//         console.error(error);
+//         res.status(500).send({ error: 'Failed to verify OTP' });
+//       } else {
+//         console.log(data);
+//         res.send({ message: 'OTP verified successfully' });
+//       }
+//     });
+//   });
+
+
+
+// const User = require("../model/userSchema");
+// const Product = require('../model/productSchema');
+
+// router.get('/validate-phone-number',async(req,res)=>{
+//    const phoneNumber = req.query.phoneNumber;
+
+//    try {
+//        const response = await axios.get(
+//          `https://api.numverify.com/v2/validate.json?api_key=FoijcPIXwwVAKOCqiDKryE2cnSP8SZ6h&number=${phoneNumber}`
+//        );
+//        res.send(response.data);
+//      } catch (error) {
+//        res.status(500).send({ error: error.message });
+//      }
+
+//    res.send('helo world from the server from router js')
+//  });
+
+
+
+//  module.exports = router;
